@@ -57,7 +57,7 @@ int main()
 {
 	int nbr = 500;
 	
-	char base[] = "01";
+	char base[] = "0123456789ABCDEFG";
 
 	ft_putnbr_base(nbr, base);
 
