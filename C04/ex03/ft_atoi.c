@@ -1,15 +1,32 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 12:24:06 by amelkony          #+#    #+#             */
+/*   Updated: 2025/10/22 16:23:40 by amelkony         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <stdio.h>
+
+int	is_whitespace(char c)
+{
+	return (c == ' ' || (c >= 9 && c <= 13));
+}
 
 int	ft_atoi(char *str)
 {
 	int	sign;
-	long long	result;
+	int	result;
 	int	i;
 
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\n')
+	while (is_whitespace(str[i]))
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{
@@ -20,17 +37,12 @@ int	ft_atoi(char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
-		i++;		
+		i++;
 	}
-
-	if (result > 2147483647 && sign == 1)
-		return (2147483647);
-	if (result > 2147483648LL && sign == -1)
-		return (-2147483648);
-	return (int)(result * sign);
+	return ((int)(result * sign));
 }
 
-
+/*
 int main()
 {
 	char c[] = "--+-+214748348";
@@ -38,3 +50,4 @@ int main()
 	printf("%d", ft_atoi(c));
 	return (0);
 }
+*/
