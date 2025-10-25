@@ -14,9 +14,9 @@
 
 void	ft_swap(char **a, char **b)
 {
-	char	temp;
+	char	*temp;
 	
-	*temp = *a;
+	temp = *a;
 	*a = *b;
 	*b = temp;
 }	
@@ -52,8 +52,9 @@ int main(int argc, char *argv[])
 	int	count;
 	
 	(void)argc;
+	i = 0;
 	while (argv[i + 1])
-		count++;\
+		count++;
 	
 	i = 1;
 	while (i < count)
