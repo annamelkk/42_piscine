@@ -49,18 +49,12 @@ int main(int argc, char *argv[])
 {
 	int	i;
 	int	j;
-	int	count;
-	
-	(void)argc;
-	i = 0;
-	while (argv[i + 1])
-		count++;
 	
 	i = 1;
-	while (i < count)
+	while (i < argc - 1)
 	{
 		j = 1;
-		while (j < count)
+		while (j < argc - 1)
 		{
 			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 				ft_swap(&argv[j], &argv[j + 1]);
