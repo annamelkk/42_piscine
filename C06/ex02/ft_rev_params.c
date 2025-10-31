@@ -6,14 +6,13 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:01:56 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/23 16:16:23 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:02:29 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int	i;
 	int	j;
@@ -23,7 +22,6 @@ int main(int argc, char *argv[])
 	while (argv[i])
 		i++;
 	i--;
-	// printf("%d", i);
 	while (i > 0)
 	{
 		j = 0;
@@ -35,6 +33,5 @@ int main(int argc, char *argv[])
 		write(1, "\n", 1);
 		i--;
 	}
-
 	return (0);
 }

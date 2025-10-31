@@ -6,11 +6,11 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:16:14 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/27 15:17:15 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:37:48 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_ultimate_range(int **range, int min, int max)

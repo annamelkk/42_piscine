@@ -6,7 +6,7 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:23:05 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/22 18:24:15 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/24 13:26:46 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_recursive_power(int nb, int power)
 {
+	if (power < 0)
+		return (0);
 	if (power == 0)
 		return (1);
 	else

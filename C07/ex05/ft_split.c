@@ -6,12 +6,12 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:22:36 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/27 17:53:30 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:01:28 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 int	is_seperator(char c, char *charset)
@@ -32,7 +32,7 @@ int	word_count(char *str, char *charset)
 {
 	int	count;
 	int	i;
-	
+
 	count = 0;
 	i = 0;
 	while (str[i])
@@ -48,9 +48,9 @@ int	word_count(char *str, char *charset)
 }
 
 char	*word_dup(char *start, char *end)
-{	
-	int	i;
-	int	length;
+{
+	int		i;
+	int		length;
 	char	*result;
 
 	length = end - start;
@@ -68,18 +68,18 @@ char	*word_dup(char *start, char *end)
 char	**ft_split(char *str, char *charset)
 {
 	char	**array;
-	int	word_index;
+	int		word_index;
 	char	*start;
 	char	*end;
 
-	
+	word_index = 0;
 	array = malloc(sizeof(char *) * (word_count(str, charset) + 1));
 	while (*str)
 	{
-		while (*str && is_seperator(*str, charset)) 
+		while (*str && is_seperator(*str, charset))
 			str++;
 		if (*str == '\0')
-			break;
+			break ;
 		start = str;
 		end = start;
 		while (*end && !is_seperator(*end, charset))
@@ -90,21 +90,21 @@ char	**ft_split(char *str, char *charset)
 	array[word_index] = NULL;
 	return (array);
 }
-
+/*
 int main(void)
 {
-    char str[] = "Hello,, world! This is ft_split.";
-    char charset[] = " ,!."; // separators
+    char str[] = "Hello,, world! i. am about. to off .myself";
+    char charset[] = " ,!.";
     char **words = ft_split(str, charset);
     int i = 0;
 
     while (words[i])
     {
         printf("%s\n", words[i]);
-        free(words[i]); // free each word
+        free(words[i]);
         i++;
     }
-    free(words); // free the array
+    free(words);
     return 0;
 }
-
+*/

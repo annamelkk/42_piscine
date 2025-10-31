@@ -6,12 +6,11 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:17:58 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/27 17:11:48 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:44:35 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -34,6 +33,17 @@ int	ft_strcpy(char *dest, char *src, int n)
 	return (n);
 }
 
+char	*ft_empty(void)
+{
+	char	*str;
+
+	str = malloc(1);
+	if (!str)
+		return (NULL);
+	str[0] = '\0';
+	return (str);
+}
+
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		k;
@@ -41,6 +51,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		length;
 	char	*result;
 
+	if (size == 0)
+		return (ft_empty());
 	length = 0;
 	i = 0;
 	k = 0;

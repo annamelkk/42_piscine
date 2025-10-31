@@ -6,11 +6,11 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:06:40 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/27 15:13:07 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:32:38 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 char	*ft_strdup(char *src)
@@ -21,17 +21,11 @@ char	*ft_strdup(char *src)
 
 	i = 0;
 	size = 0;
-	if (src[i] == '\0')
-		return (NULL);
-	while (src[i])
-	{
+	while (src[size])
 		size++;
-		i++;
-	}
-	new_string = (char *)malloc(size + 1);
+	new_string = malloc(size + 1);
 	if (!new_string)
 		return (NULL);
-	i = 0;
 	while (src[i])
 	{
 		new_string[i] = src[i];
@@ -40,16 +34,16 @@ char	*ft_strdup(char *src)
 	new_string[i] = '\0';
 	return (new_string);
 }
-
+/*
 int main(void)
 {
-	char *original = "Hello world!";
+	char *original = "lowkey going crazyy";
 	char *copy = ft_strdup(original);
 
-	printf("Original: %s\n", original);
-	printf("Copy: %s\n", copy);
+	printf("original: %s\n", original);
+	printf("copy: %s\n", copy);
 
 	free(copy);
 	return 0;
 }
-
+*/

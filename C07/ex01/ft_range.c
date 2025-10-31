@@ -6,11 +6,11 @@
 /*   By: amelkony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:14:14 by amelkony          #+#    #+#             */
-/*   Updated: 2025/10/27 15:16:01 by amelkony         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:34:41 by amelkony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 int	*ft_range(int min, int max)
@@ -19,7 +19,7 @@ int	*ft_range(int min, int max)
 	int		numbers;
 	int		*arr;
 
-	if ((max - min) <= 1)
+	if (max <= min)
 		return (NULL);
 	numbers = max - min;
 	arr = malloc(numbers * sizeof(int));
@@ -33,7 +33,7 @@ int	*ft_range(int min, int max)
 	}
 	return (arr);
 }
-
+/*
 int main(void)
 {
 	int a = 1;
@@ -51,4 +51,4 @@ int main(void)
 	printf("\n");
 	free(arr);
 }
-
+*/

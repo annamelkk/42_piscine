@@ -1,5 +1,5 @@
 #!/bin/bash
 
-id -nG "$FT_USER" | tr ' ' ',' | tr ',' '\n'
+id -nG "$FT_USER" | tr ' ' ','
  
 
